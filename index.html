@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>piedra-papel-tijera</title>
+    <link rel="stylesheet" href="style.css">
+    <!--Fonts google - fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+        <h2>piedra-papel-tijera</h2>
+    </header>
+
+    <main>
+        <div class="container-usuario">
+            <div class="usuario">
+                <h3>Opción usuario</h3>
+                <img src="papel.png" alt="Mano caricatura de forma papel" id="papel" onclick="enviarPapel()">
+                <img src="piedra.png" alt="Mano caricatura de forma piedra" id="piedra" onclick="enviarPiedra()">
+                <img src="tijera.png" alt="Mano caricatura de forma tijera" id="tijera" onclick="enviarTijera()">
+            </div>
+        </div>
+
+        <div class="container-resultado">
+            <h3>Resultados</h3>
+            <table>
+                <tr>
+                    <td class="container-intentos">Intentos</td>
+                    <td class="container-ganador">Ganados</td>
+                    <td class="container-empate">Empates</td>
+                    <td class="container-perdido">Perdidos</td>
+                </tr>
+                <tr>
+                    <td class="container-intentos" id="Intentos"></td>
+                    <td class="container-ganador" id="Ganados"></td>
+                    <td class="container-empate" id="Empate"></td>
+                    <td class="container-perdido" id="Perdido"></td>
+                </tr>
+            </table>
+
+            <div class="enfrentamiento">
+                <div id="opcionUsuario"></div>
+                <div id="opcionOponente"></div>
+            </div>
+            <h2 class="parpadea" id="Respuesta"></h2>
+        </div>
+
+        <div class="container-ia">
+            <h3>Opción IA</h3>
+            <img src="papel.png" alt="Mano caricatura de forma papel">
+            <img src="piedra.png" alt="Mano caricatura de forma piedra">
+            <img src="tijera.png" alt="Mano caricatura de forma tijera">
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

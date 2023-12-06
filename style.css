@@ -1,0 +1,205 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Mono', monospace;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+body::-webkit-scrollbar-track {
+    display: none;
+}
+
+body::-webkit-scrollbar-thumb {
+    display: none;
+}
+
+header {
+    background: rgb(186, 46, 46);
+    padding: 10px;
+    text-align: center;
+}
+
+main {
+    margin: 15px 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+img {
+    width: 8rem;
+    border-radius: 50%;
+}
+
+.container-usuario img {
+    cursor: pointer;
+    transition: 1s;
+}
+
+.container-usuario img:hover {
+    transition: 1s;
+    transform: rotate(0.25turn);
+    cursor: pointer;
+}
+
+.usuario,
+.container-ia {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+table {
+    margin: 10px 0 0 0;
+    width: 100%;
+}
+
+td {
+    padding: 10px;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.container-intentos {
+    border: solid blue 2px;
+}
+
+.container-ganador {
+    border: solid #0FEF60 2px;
+}
+
+.container-empate {
+    border: solid #EADD16 2px;
+}
+
+.container-perdido {
+    border: solid red 2px;
+}
+
+.enfrentamiento {
+    display: flex;
+    height: 14rem;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+h2 {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.parpadea {
+    animation-name: parpadeo;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+
+    -webkit-animation-name: parpadeo;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+}
+
+@-moz-keyframes parpadeo {
+    0% {
+        opacity: 1.0;
+    }
+
+    50% {
+        opacity: 0.0;
+    }
+
+    100% {
+        opacity: 1.0;
+    }
+}
+
+@-webkit-keyframes parpadeo {
+    0% {
+        opacity: 1.0;
+    }
+
+    50% {
+        opacity: 0.0;
+    }
+
+    100% {
+        opacity: 1.0;
+    }
+}
+
+@keyframes parpadeo {
+    0% {
+        opacity: 1.0;
+    }
+
+    50% {
+        opacity: 0.0;
+    }
+
+    100% {
+        opacity: 1.0;
+    }
+}
+
+/* Responsive */
+
+@media (max-width: 430px) {
+    main {
+        flex-direction: column;
+    }
+
+    .container-usuario h3,
+    .container-ia h3 {
+        padding: 10px;
+    }
+
+    .container-resultado h3 {
+        padding: 0 0 0 10px;
+    }
+
+    .usuario,
+    .container-ia {
+        flex-direction: row;
+    }
+
+    table {
+        padding: 0 10px;
+    }
+
+    img {
+        width: 6rem;
+    }
+
+    .enfrentamiento {
+        height: 10rem;
+    }
+}
+
+@media (max-width: 430px) {
+    img {
+        width: 5rem;
+    }
+
+    td {
+        padding: 10px 0;
+    }
+}
+
+@media (max-width: 330px) {
+    img {
+        width: 4rem;
+    }
+
+    table {
+        padding: 0;
+    }
+
+    td {
+        padding: 10px 0;
+    }
+}
